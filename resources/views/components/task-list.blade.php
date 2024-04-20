@@ -13,7 +13,7 @@
                     <form method="post" action="/{{$task->id}}">
                         @csrf
                         @method($method)
-                        <x-button>{{$button}}</x-button>
+                        <x-form.button>{{$button}}</x-form.button>
                     </form>
                 </div>
             </div>

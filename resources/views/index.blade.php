@@ -1,4 +1,5 @@
 <x-layout>
+    @include('components/search-bar')
     <x-task-list :tasks="$tasks->filter(function ($task) {return !$task->done;})" :method="'patch'">
         List of ongoing tasks
         <x-slot name="button">Done</x-slot>
