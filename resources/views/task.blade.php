@@ -1,10 +1,14 @@
 <x-layout>
-    <h3 class="text-2xl m-4">Name: {{ $task->name}}</h3>
-    @if($task->label)
-        <span> Label: {{$task->label}}</span>
-    @endif
+    <h3 class="text-2xl mb-2">Task</h3>
+    <div class="flex">
+        <span class="text-lg">{{ $task->name}}</span>
+        @if($task->label)
+            <span class="ml-3 text-lg text-red-500"> #{{$task->label}}</span>
+        @endif
+    </div>
     @if($task->description)
-        <p class="mt-2">Description:</p>
+        <h3 class="text-2xl mt-4 mb-2">Description</h3>
+
         <p>{{$task->description}}</p>
     @endif
 </x-layout>

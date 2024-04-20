@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-black font-sans flex flex-col items-center m-40 text-gray-300 ">
-<h1 class="text-4xl m-8">Todo App </h1>
+<a href="/" class="text-4xl m-8">Todo App </a>
     {{ $slot }}
 </body>
 </html>

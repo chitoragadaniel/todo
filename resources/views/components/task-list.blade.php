@@ -1,7 +1,7 @@
 @props(['tasks', 'method'])
 
 @if($tasks->count())
-    <h3 class="text-2xl m-4">{{ $slot }}</h3>
+    <h3 class="text-2xl mt-10">{{ $slot }}</h3>
     <div class="w-1/4">
         @foreach($tasks as $task)
             <div class="flex justify-between w-full mt-1">
