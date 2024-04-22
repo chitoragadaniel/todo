@@ -1,4 +1,4 @@
-@props(['tasks', 'method'])
+@props(['tasks'])
 
 @if($tasks->count())
     <h3 class="text-2xl mt-10">{{ $slot }}</h3>
@@ -12,8 +12,13 @@
                     @endif
                     <form method="post" action="/{{$task->id}}/done">
                         @csrf
-                        @method($method)
+                        @method('PATCH')
                         <x-form.button>{{$button}}</x-form.button>
+                    </form>
+                    <form method="post" action="/{{$task->id}}/done" class="ml-2">
+                        @csrf
+                        @method('DELETE')
+                        <x-form.button>Delete</x-form.button>
                     </form>
                 </div>
             </div>

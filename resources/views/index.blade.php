@@ -1,13 +1,13 @@
 <x-layout>
     @include('components/search-bar')
-    <x-task-list :tasks="$tasks->filter(function ($task) {return !$task->done;})" :method="'patch'">
+    <x-task-list :tasks="$tasks->filter(function ($task) {return !$task->done;})">
         List of ongoing tasks
         <x-slot name="button">Done</x-slot>
     </x-task-list>
 
-    <x-task-list :tasks="$tasks->filter(function ($task) {return $task->done;})" :method="'delete'">
+    <x-task-list :tasks="$tasks->filter(function ($task) {return $task->done;})">
         Finished tasks
-        <x-slot name="button">Delete</x-slot>
+        <x-slot name="button">Not done</x-slot>
     </x-task-list>
 
 
