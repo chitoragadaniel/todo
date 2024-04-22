@@ -5,5 +5,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [TaskController::class, 'index']);
 Route::put('/', [TaskController::class, 'store']);
 Route::get('/{task}', [TaskController::class, 'show']);
-Route::patch('/{task}', [TaskController::class, 'done']);
+Route::patch('/{task}/done', [TaskController::class, 'done']);
+Route::patch('{task}', [TaskController::class, 'patch']);
 Route::delete('/{task}', [TaskController::class, 'delete']);

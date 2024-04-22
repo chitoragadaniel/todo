@@ -1,5 +1,6 @@
 <x-layout>
     <h3 class="text-2xl mb-2">Task</h3>
+
     <div class="flex">
         <span class="text-lg">{{ $task->name}}</span>
         @if($task->label)
@@ -11,4 +12,5 @@
 
         <p>{{$task->description}}</p>
     @endif
+    <x-edit-task :task="$task"></x-edit-task>
 </x-layout>

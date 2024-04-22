@@ -10,7 +10,7 @@
                     @if($task->label)
                         <span class="mr-3 text-red-500">#{{$task->label}}</span>
                     @endif
-                    <form method="post" action="/{{$task->id}}">
+                    <form method="post" action="/{{$task->id}}/done">
                         @csrf
                         @method($method)
                         <x-form.button>{{$button}}</x-form.button>

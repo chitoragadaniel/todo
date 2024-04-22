@@ -46,11 +46,19 @@ class TaskController extends Controller
 
     function done(Task $task)
     {
-        $task->done = true;
+        $task->done = !$task->done;
         $task->save();
         return redirect('/');
     }
 
+    function patch(Task $task)
+    {
+        $task->name = \request()->name;
+        $task->description = \request()->description;
+        $task->label = \request()->label;
+        $task->save();
+        return redirect('/');
+    }
     function delete(Task $task)
     {
         $task->delete();

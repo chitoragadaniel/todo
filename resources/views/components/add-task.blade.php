@@ -2,7 +2,7 @@
     @csrf
     @method('PUT')
     @foreach(['name', 'description', 'label'] as $input)
-        <div class="mt-2 flex justify-between">
+        <div class="mb-2 flex justify-between">
             <span>{{ucfirst($input)}}</span>
             <x-form.input :name="$input"></x-form.input>
         </div>
